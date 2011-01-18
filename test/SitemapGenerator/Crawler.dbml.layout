@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Crawler">
+  <DataContextMoniker Name="/CrawlerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a9ff204c-31a2-4539-9407-413218c61b87" absoluteBounds="0.75, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CrawlerDataContext/Session" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb11171a-b6ac-4432-8bf3-41571d5b5ac6" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e322058c-9c7e-492b-b763-01f41f741163" absoluteBounds="6.25, 2.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/CrawlerDataContext/SessionScanRelation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b1cc1fe-07d7-4a08-acae-984c2301ef4b" absoluteBounds="6.265, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b58b2ac1-e77d-4f19-8ab3-6a4457e54eb6" absoluteBounds="3.5, 1, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/CrawlerDataContext/SessionScan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eeacd5a1-47c0-405b-afb2-83078daa0a4f" absoluteBounds="3.515, 1.46, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.38544840494792); (6.25 : 3.38544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrawlerDataContext/SessionScan/SessionScan_SessionScanRelation" />
+      <nodes>
+        <classShapeMoniker Id="b58b2ac1-e77d-4f19-8ab3-6a4457e54eb6" />
+        <classShapeMoniker Id="e322058c-9c7e-492b-b763-01f41f741163" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.44314697265625); (3.5 : 3.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CrawlerDataContext/Session/Session_SessionScan" />
+      <nodes>
+        <classShapeMoniker Id="a9ff204c-31a2-4539-9407-413218c61b87" />
+        <classShapeMoniker Id="b58b2ac1-e77d-4f19-8ab3-6a4457e54eb6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

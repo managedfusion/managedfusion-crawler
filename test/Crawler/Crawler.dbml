@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Crawler" Class="CrawlerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=nick-laptop\sqlexpress;Initial Catalog=Crawler;Integrated Security=True" SettingsObjectName="ManagedFusion.Crawler.Properties.Settings" SettingsPropertyName="CrawlerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Session" Member="Sessions">
+    <Type Name="Session">
+      <Column Name="SessionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ScanDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Session_SessionScan" Member="SessionScans" ThisKey="SessionKey" OtherKey="SessionKey" Type="SessionScan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SessionScanRelation" Member="SessionScanRelations">
+    <Type Name="SessionScanRelation">
+      <Column Name="SessionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UrlHash" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RelatedHash" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Related" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SessionScan_SessionScanRelation" Member="SessionScan" ThisKey="SessionKey,UrlHash" OtherKey="SessionKey,UrlHash" Type="SessionScan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SessionScan" Member="SessionScans">
+    <Type Name="SessionScan">
+      <Column Name="SessionKey" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UrlHash" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ScanDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ContentHash" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="Host" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Base" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Found" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Redirect" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Method" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Robots" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContentEncoding" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContentLength" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CacheControl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expires" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SessionScan_SessionScanRelation" Member="SessionScanRelations" ThisKey="SessionKey,UrlHash" OtherKey="SessionKey,UrlHash" Type="SessionScanRelation" />
+      <Association Name="Session_SessionScan" Member="Session" ThisKey="SessionKey" OtherKey="SessionKey" Type="Session" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler", "test\Crawler\Crawler.csproj", "{7B304E70-27E8-43FD-A786-7D216FDE90A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Crawler", "src\ManagedFusion.Crawler.csproj", "{27FB0BB6-4281-40A7-B379-E01CC6E642B1}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = 
+		SccProjectUniqueName0 = ..\\ManagedFusion\\Source\\ManagedFusion.csproj
+		SccAuxPath0 = https://team.managedfusion.com
+		SccLocalPath0 = ..\\ManagedFusion\\Source
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B304E70-27E8-43FD-A786-7D216FDE90A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B304E70-27E8-43FD-A786-7D216FDE90A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B304E70-27E8-43FD-A786-7D216FDE90A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B304E70-27E8-43FD-A786-7D216FDE90A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FB0BB6-4281-40A7-B379-E01CC6E642B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FB0BB6-4281-40A7-B379-E01CC6E642B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FB0BB6-4281-40A7-B379-E01CC6E642B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FB0BB6-4281-40A7-B379-E01CC6E642B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F1B19A-91D8-4F24-99D8-40042F86855D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F1B19A-91D8-4F24-99D8-40042F86855D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F1B19A-91D8-4F24-99D8-40042F86855D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F1B19A-91D8-4F24-99D8-40042F86855D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19CDD5E-139E-447D-9CE7-2DBD4F3A84E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19CDD5E-139E-447D-9CE7-2DBD4F3A84E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19CDD5E-139E-447D-9CE7-2DBD4F3A84E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19CDD5E-139E-447D-9CE7-2DBD4F3A84E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
